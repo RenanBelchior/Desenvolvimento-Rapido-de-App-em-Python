@@ -1,0 +1,141 @@
+#criando e escrevendo
+f = open ('teste.txt', 'w')
+f = write ('texto 1')
+f.close()
+
+
+#lendo
+f = open('teste.txt', 'r')
+print(f.read())
+f.close
+==========================================================
+ 
+#Criando e lendo arquivo com "with"
+with open ('teste.txt', 'w') as f:
+   f.write('texto 1'\n)
+   f.write('texto 2')
+
+#lendo  o arquivo
+with open ('teste.txt', 'r') as f:
+  print(f.read())
+
+==========================================================
+Ler linha a linha de um arquivo com readline()
+
+f = open('arquivo_teste.txt', 'r')
+printf(f.readline())
+printf(f.readline())
+printf(f.readline())
+printf(f.readline())
+printf(f.readline())
+printf(f.readline())
+f.close()
+
+---------------------------------------------------------
+f = open('arquivo_teste.txt', 'r')
+print(f.readline(5))
+f.close()
+
+
+==========================================================
+Ler todas as linhas de um arquivo em uma list com o readlines()
+
+f = open('arquivo_teste.txt', 'r')
+print(f.readlines())
+f.close()
+
+-----------------------------------------------------------
+Ler todas as linhas de um arquivo com laço de repetição for
+
+f = open('arquivo_teste.txt', 'r')
+for linha in f
+  print(linha)
+f.close()
+
+-------------------------------------------------------------
+ler as linhas de um arquivo com o for e separar as palavras de
+cada linha com o método split()
+
+f = open('arquivo_teste.txt', 'r')
+for linha in f
+  print(linha.split())
+f.close()
+
+resultado =>
+
+['primeira','linha']
+['segunda','linha']
+['terceira','linha']
+['quarta','linha']
+
+----------------------------------------------------------------
+Abrir um arquivo txt e escrever elementos de uma lista
+
+f = open('arquivo_escrever.txt', 'w+')
+
+texto = ["palavra 1", "palavra 2", "palavra 3"]
+
+for linha in texto:
+   f.write(linha)
+   f.write("\n")
+f.close()
+
+----------------------------------------------------------------
+É possível ler cada linha diretamente do arquivo sem realine() e/ou
+readlines()
+
+f = open("arquivo_teste.txt", "r")
+
+for linha in f:
+   print(linha)
+
+f.close()
+
+----------------------------------------------------------------
+Ler um arquivo com caracteres acentuados
+
+f = open ('arquivo_portugues.txt', 'r')
+
+print(f.read())
+f.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
