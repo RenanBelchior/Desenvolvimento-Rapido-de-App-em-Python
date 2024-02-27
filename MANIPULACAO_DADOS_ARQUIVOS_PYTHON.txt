@@ -12,23 +12,34 @@ f.close
  
 #Criando e lendo arquivo com "with"
 with open ('teste.txt', 'w') as f:
-   f.write('texto 1'\n)
+   f.write('texto 1\n')
    f.write('texto 2')
 
 #lendo  o arquivo
 with open ('teste.txt', 'r') as f:
   print(f.read())
 
+
+-----------------------------------------------------------
+
+#Criando e lendo arquivo com "with"
+with open ('teste.txt', 'w') as f:
+   f.write('texto 1\n')
+   f.write('texto 2')
+
+#lendo  o arquivo
+with open ('teste.txt', 'r') as f:
+  print(f.read())
+
+with open('teste.txt', 'a') as f:
+   f.write('\ntexto 3')
 ==========================================================
 Ler linha a linha de um arquivo com readline()
 
-f = open('arquivo_teste.txt', 'r')
-printf(f.readline())
-printf(f.readline())
-printf(f.readline())
-printf(f.readline())
-printf(f.readline())
-printf(f.readline())
+f = open('teste.txt', 'r')
+print(f.readline())
+print(f.readline())
+print(f.readline())
 f.close()
 
 ---------------------------------------------------------
@@ -45,7 +56,7 @@ print(f.readlines())
 f.close()
 
 -----------------------------------------------------------
-Ler todas as linhas de um arquivo com laço de repetição for
+Ler todas as linhas de um arquivo com laÃ§o de repetiÃ§Ã£o for
 
 f = open('arquivo_teste.txt', 'r')
 for linha in f
@@ -54,7 +65,7 @@ f.close()
 
 -------------------------------------------------------------
 ler as linhas de um arquivo com o for e separar as palavras de
-cada linha com o método split()
+cada linha com o mÃ©todo split()
 
 f = open('arquivo_teste.txt', 'r')
 for linha in f
@@ -81,7 +92,7 @@ for linha in texto:
 f.close()
 
 ----------------------------------------------------------------
-É possível ler cada linha diretamente do arquivo sem realine() e/ou
+Ã‰ possÃ­vel ler cada linha diretamente do arquivo sem realine() e/ou
 readlines()
 
 f = open("arquivo_teste.txt", "r")
