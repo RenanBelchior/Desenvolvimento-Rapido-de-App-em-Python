@@ -105,31 +105,209 @@ f.close()
 ----------------------------------------------------------------
 Ler um arquivo com caracteres acentuados
 
-f = open ('arquivo_portugues.txt', 'r')
+f = open ('arquivo_portugues.txt', 'r'), encoding="utf-8"
 
 print(f.read())
 f.close()
 
+----------------------------------------------------------------
+Objeto do tipo arquivo contém alguns atributos importantes, como
+NAME, MODE,  e CLOSED. Observe o seguinte script.
+
+f = open ("arquiv_dados.txt")
+
+print("Nome do arquivo: ", f.name)
+print("Modo do arquivo: ", f.mode)
+print("Arquivo fechado?: ", f.closed)
+
+----------------------------------------------------------------
+import os
+
+diretorio = os.getcwd()
+
+print(diretorio)
+
+getcwd(): obtém endereço do diretório
+
+----------------------------------------------------------------
+import os 
+
+print(os.listdir())
+
+listdir(): insere os nomes dos arquivos do diretorio atual em uma
+lista
+
+----------------------------------------------------------------
+
+import os
+
+arquivos = os.scandir()
+
+for obj in arquivos:
+   print(obj)
+
+scandir(): Objeto que lista todos os arquivos do diretorio raiz
+do projeto
+
+----------------------------------------------------------------
+
+import os
+
+arquivos = os.scandir()
+
+for obj in arquivos:
+    print(obj)
 
 
+resultado:
+
+<DirtEntry 'main.py'>
+<DirtEntry 'Pasta Arquivos'>
+<DirtEntry 'Pasta Teste'>
+<DirtEntry 'texto'>
+<DirtEntry 'venv'>
+
+-----------------------------------------------------------------
+import os 
+
+arquviso = os.scandir()
+
+for obj in arquivos:
+    print(obj.name)
 
 
+resultado:
+  main.py
+  Pasta Arquivos
+  Pasta Teste
+  texto
+  venv
+-----------------------------------------------------------------
+
+import os 
+
+arquviso = os.scandir()
+
+for obj in arquivos:
+    print(obj.path)
 
 
+resultado:
+  .\main.py
+  .\Pasta Arquivos
+  .\Pasta Teste
+  .\texto
+  .\venv
+
+-----------------------------------------------------------------
+
+import os 
+
+arquviso = os.scandir()
+
+for obj in arquivos:
+    print(obj.is_+dir())
 
 
+resultado:
+  main.py            False
+  Pasta Arquivos     True
+  Pasta Teste        True
+  texto              False
+  venv               True
+
+-----------------------------------------------------------------
+1. Elabore um programa em Python que insere a tabuada de multiplicação de 9
+em um arquivo txt.
+
+arquivo = open("tabuada_9.txt", "w")
+arquivo.write("tabuada=int(input("Tabuada do numero: "))
+
+for count in range(10):
+    print("%d x %d = %d" % (tabuada, count+1, tabuada*(count+1)) )")
+
+arquivo.close()
+
+------------------------------------------------------------------
+
+2. Faça um programa que leia os dados de uma pessoa (Nome, RG, CPF, ano de
+nascimento e armazene em um arquivo txt, calculando a idade da pessoa.
+
+from datetime import datetime
+
+def
+calcular_idade(ano_nascimento):
+       data_atual = datetime.now()
+       ano_atual = data_atual.year
+       idade = ano_atual - ano_nascimento
+       return idade
+
+def
+main():
+  nome = input("Digite o NOME da pessoa: ")
+  rg = input("Digite o RG da pessoa: ")
+  cpf = input("Digite o CPF da pessoa: ")
+  ano_nascimento = (input("Digite o ANO de NASCIMENTO da pessoa: "))
+
+idade = calcular _idade(ano_nascimento)
+
+with open("dados_pessoas.txt", "w") as arquivo:
+    arquivo.write(f"Nome:{nome}\n")
+    arquivo.write(f"RG:{rg}\n")
+    arquivo.write(f"CPF:{cpf}\n")
+    arquivo.write(f"Ano de Nascimento:{ano_nascimento}\n")
+    arquivo.write(f"Idade:{idade}\n")
+
+print("Dados da pessoa armazenados com sucesso no arquivo 'dados_pessoa.txt'")
+f.close()
 
 
+------------------------------------------------------------------
 
+3. Faça um programa que leia um arquivo txt e insere cada linha em uma lista.
 
+def ler_arquivo_txt(nome_arquivo):
+    linhas = []
+    with open(nome_arquivo, "r") as arquivo
+for linha in arquivo:
+    linhas.append(linhas.strip())
+    return linhas
+ 
+def main():
+  nome_arquivo = input("Digite o nome do arquivo txt a ser lido: ")
+  linhas = ler_arquivo_txt(nome_arquivo)
+  print("conteudo do arquivo lido: ")
+  for linha in arquivo:
+      print(linha)
+f.close() 
 
+------------------------------------------------------------------
+4.  Elabore um programa em Python que leia o nome e duas notas de um aluno
+do teclado, calcule a média e armazene em um arquivo txt o nome, a média
+final e se o mesmo foi Aprovado (média >=6) ou Reprovado (média < 6).
 
+nome = input ("digite o nome do aluno: ")
+nota1 = input ("Digite a primeira nota: ")
+nota2 = input ("Digite a segunda nota: ")
 
+media = (nota1 + nota2 ) / 2
 
+if media => 6:
+   situacao = "aprovado(a)"
+else:
+   situacao = "reprovado(a)"
 
+with open ("resultado.txt", "w") as arquivo:
+   arquivo.write("Nome:{nome}"\n)
+   arquivo.write("Media Final: {media}\n")
+   arquivo.write("Situação: {situacao}"\n)
 
+f.close()
 
-
+------------------------------------------------------------------
+5. Faça um algoritmo em Python que leia dois números inteiros do teclado, faça
+uma mini calculadora (soma, subtração, mulƟplicação e divisão) e armazene
+todos os resultados em um arquivo txt.
 
 
 
