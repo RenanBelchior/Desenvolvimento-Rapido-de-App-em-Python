@@ -220,13 +220,14 @@ resultado:
 1. Elabore um programa em Python que insere a tabuada de multiplicação de 9
 em um arquivo txt.
 
-arquivo = open("tabuada_9.txt", "w")
-arquivo.write("tabuada=int(input("Tabuada do numero: "))
-
-for count in range(10):
-    print("%d x %d = %d" % (tabuada, count+1, tabuada*(count+1)) )")
-
-arquivo.close()
+f = open('tabuada.txt', 'w')
+i = 1
+while i <= 10:
+   res = 9 * i
+   f.write('9 x '+ str(i) + '=' +(res) +'\n')
+   i = i + 1
+f.close()
+print('A tabuada foi escrito no arquivo')
 
 ------------------------------------------------------------------
 
