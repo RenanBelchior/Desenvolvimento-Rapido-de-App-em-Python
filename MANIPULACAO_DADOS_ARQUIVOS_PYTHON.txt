@@ -311,21 +311,55 @@ uma mini calculadora (soma, subtração, mulƟplicação e divisão) e armazene
 todos os resultados em um arquivo txt.
 
 
+f = ('calculadora.txt', 'w')
 
+def calculate():
+    operation = input('''
+Digite o operador desejado:
++ para soma
+- para subtração
+* para multiplicação
+/ para divisão
+''')
 
+    number_1 = int(input('Digite o primeiro número: '))
+    number_2 = int(input('Digite o segundo número: '))
 
+    if operation == '+':
+        print('{} + {} = '.format(number_1, number_2))
+        print(number_1 + number_2)
 
+    elif operation == '-':
+        print('{} - {} = '.format(number_1, number_2))
+        print(number_1 - number_2)
 
+    elif operation == '*':
+        print('{} * {} = '.format(number_1, number_2))
+        print(number_1 * number_2)
 
+    elif operation == '/':
+        print('{} / {} = '.format(number_1, number_2))
+        print(number_1 / number_2)
 
+    else:
+        print('Você não escolheu um operador lógico')
 
+    # Add again() function to calculate() function
+    again()
 
+def again():
+    calc_again = input('''
+Você gostaria de calcular novamente?
+Y para SIM ou N para NÃO.
+''')
 
+    if calc_again.upper() == 'Y':
+        calculate()
+    elif calc_again.upper() == 'N':
+        print('Vejo você em breve!')
+    else:
+        again()
 
-
-
-
-
-
+calculate()
 
 
