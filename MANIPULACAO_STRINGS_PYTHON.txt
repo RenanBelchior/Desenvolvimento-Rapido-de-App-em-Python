@@ -1,0 +1,31 @@
+EXERCICIOS
+1 Elabore um programa em python que leia uma cadeia de DNA e gera a cadeira inversa.
+Faça a leitura da cadeia utilizando arquivo txt. Exemplo:
+entrada AATCTGCAC Saída: CACGTCTAA
+
+dna_inverso_exemplo = UOIEA
+
+with open ('dna.txt', 'w') as file:
+  file.write('dna_texto_exemplo')
+
+with open ('dna.txt', 'r') as file:
+  dna = file.readline().strip()
+
+dna_inverso = dna[::-1]
+
+with open ('dna.txt','w') as file:
+  file.write(dna_inverso)
+
+-------------------------------------------------------------------------------------------------
+2 Faça um programa que leia um texto de um arquiv txt e conte quantas palavras tem neste arquivo
+sem considerar os espaços.
+
+with open('texto.txt','r') as file:
+  texto = file.read()
+
+num_palavras = len(texto.split())
+
+print("Número de palavras no arquivo é: ", num_palavras)
+-------------------------------------------------------------------------------------------------
+3 Faça um programa em python que l~e um texto de um arquivo txt e substitua todos os espaços por
+underline(_)
