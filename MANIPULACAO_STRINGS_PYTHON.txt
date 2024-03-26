@@ -20,12 +20,58 @@ with open ('dna.txt','w') as file:
 2 Faça um programa que leia um texto de um arquiv txt e conte quantas palavras tem neste arquivo
 sem considerar os espaços.
 
-with open('texto.txt','r') as file:
+f = open('texto.txt','r') as file:
   texto = file.read()
 
 num_palavras = len(texto.split())
 
 print("Número de palavras no arquivo é: ", num_palavras)
 -------------------------------------------------------------------------------------------------
-3 Faça um programa em python que l~e um texto de um arquivo txt e substitua todos os espaços por
+3 Faça um programa em python que leia um texto de um arquivo txt e substitua todos os espaços por
 underline(_)
+
+f = open("texto.txt", "r") as arquivo:
+    texto = arquivo.read()
+
+texto_sem_espacos = texto.replace(" ", "_")
+
+f = open("texto_sem_espacos.txt", "w") as arquivo:
+    arquivo.write(texto_sem_espacos)
+
+-------------------------------------------------------------------------------------------------
+
+4 Elabore um script em Python que leia um arquivo contendo frases e insira cada
+palavra da frase lida em uma lista, sem que haja palavras repetidas. Exemplo: A
+frase lida de um arquivo: “futebol tequila bola futebol torcida bola goleiro”, deve
+ir para a lista [“futebol”, “tequila”, “bola”, “torcida”,
+“goleiro”].
+
+
+arquivo = open("frases.txt", "r")
+
+linhas = arquivo.readlines()
+arquivo.close()
+palavras = ["futebol", "tequila", "bola", "torcida", "goleiro"]
+
+for linha in linhas:
+    linha = linha.strip()
+    palavras_da_linha = linha.split()
+    for palavra in palavras_da_linha:
+        if palavra not in palavras:
+            palavras.append(palavra)
+print(palavras)
+
+-------------------------------------------------------------------------------------------------
+
+TRATAMENTO DE EXCEÇÕES
+
+import math
+num = -2
+
+try:
+  result = math.sqrt(num)
+  print("A raiz quadrada", result)
+except Exception:
+   print('Não existe a raiz quadradada de nª negativo')
+
+
