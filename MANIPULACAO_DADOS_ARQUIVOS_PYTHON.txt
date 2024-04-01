@@ -361,5 +361,50 @@ Y para SIM ou N para NÃO.
         again()
 
 calculate()
+-----------------------------------------------------------------------------------------------------
+1. Faça um script que leia um nome e verifique se o nome é string válido, usando try/execpt
+
+try: 
+  nome = input("Digite seu nome: ")
+if
+  isistance (nome, str):
+    print("É uma string")
+else:
+    raise TypeError("Não é uma string")
+except TypeError as e:
+  print(e)
 
 
+2. Leitura de dois numeros inteiros do teclado e realizar a divisão dos números, fazendo os seguintes tratamentos das exceções caso:
+A- Exista divisão por zero
+B- um dos numeros digitados não é números.
+
+A e B
+try:
+  inteiro1 = int(input(Digite um numero inteiro: ))
+  inteiro2 = int(input(Digite outro numero inteiro))
+  resultado = inteiro1 / inteiro2
+  print("O resultado da divisão é: ", resultado)
+except ZeroDivisionError:
+  print("Erro: aconteceu uma divisão por zero!")
+except ValueError:
+  print("Valor digitado não é um inteiro")
+
+3. Tendo uma lista de numeros inteiros, faça o calculo do fatorial de cada numero da lista. Faça os seguintes tratamentos de exceções, caso:
+A- Exista um elemento da lista que nao seja numero.
+B- Exista um numero negativo
+
+A e B
+
+try:
+numero = int(input("Fatorial de: ") )
+resultado=1
+count=1
+
+while count <= numero:
+    resultado *= count
+    count += 1
+
+print(resultado)
+except
+execpt
