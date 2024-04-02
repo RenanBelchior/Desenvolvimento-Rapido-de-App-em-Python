@@ -406,5 +406,14 @@ while count <= numero:
     count += 1
 
 print(resultado)
-except
-execpt
+except TypeError:
+   print("Não existe fatorial de", numero)
+execpt TypeRecursionError:
+   print("Não existe fatorial de", numero)
+
+
+4. Tendo um arquivo de texto, conte quantas palavras tem esse arquivo, alem de contar quantas linhas existem. Seu script deve verificar se o arquivo esta no diretorio
+
+
+
+5. Um script que leia um nome completo, converta a primeira letra em letra maiscula (joao silva => joao silva) e armazene dentro de um arquivo. Elobore tratamento de exceção para verificar se é um nome válido e se o arquivo está no diretorio.
